@@ -16,3 +16,4 @@ export const GET_USER = "GET_USER";
 export const GET_RESERVATION = "GET_RESERVATION";
 export const FIND_USER = "FIND_USER";
 export const FIND_RESERVATION = "FIND_RESERVATION";
+export const DELETE_RESERVE = "DELETE_RESERVE";

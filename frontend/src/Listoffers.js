@@ -12,16 +12,16 @@ export default function Listoffers(props) {
     const dispatch = useDispatch();
     const [modif, setModif] = useState(false);
   
-    const [nomhotel, setNomhotel] = useState(props.el.nomhotel);
+   
  
     const [avatar, setAvatar] = useState(props.el.avatar);
-    const [dateentree, setDateentree] = useState(props.el.dateentree);
-    const [datesortie, setDatesortie] = useState(props.el.datesortie);
-   const reservations=props.el
-    
+
+   const reservations=props.el;
+ const nomhotel=props.el.nomhotel
+
     const [rating, setRating] = useState(props.el.rating);
       const user = useSelector((state) => state.Authreducer.user);
-     
+      const name=user.name
       const handleClick = (e) => {
         e.preventDefault();
     setModif(true);
@@ -30,7 +30,7 @@ export default function Listoffers(props) {
    //dispatch(updatereservations(props.el._id,{user,dateentree,datesortie,nomhotel,avatar,rating})); 
    
    /* dispatch(addreserve(reservation,user))*/    
-    dispatch(addreserve({reservations,user}))     
+    dispatch(addreserve({reservations,user,nomhotel,name}))     
       };
       
     

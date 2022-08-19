@@ -9,7 +9,7 @@ import {
   GET_USERS,
   LOGIN,
   LOGOUT,
-  REGISTER,UPDATE_RESERVATIONS,UPDATE_USERS,GET_USER, FIND_USER, FIND_RESERVATION
+  REGISTER,UPDATE_RESERVATIONS,UPDATE_USERS,GET_USER, FIND_USER, FIND_RESERVATION, DELETE_RESERVE
 } from "../Types/authTypes";
 
 const initialState = {
@@ -20,8 +20,8 @@ const initialState = {
   reservation:{},
   reserve:[],
   found:{},
-  fr:{},
-  fu:{}
+  fr:[],
+  fu:[]
 };
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -52,6 +52,8 @@ const reducer = (state = initialState, { type, payload }) => {
       return { loading: true };
       case DELETE_RESERVATIONS:
       return { loading: true };
+      case DELETE_RESERVE:
+        return { loading: true };
       case UPDATE_USERS:
         return { loading: true };
         case UPDATE_RESERVATIONS:

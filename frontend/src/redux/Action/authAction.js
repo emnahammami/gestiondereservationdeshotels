@@ -6,7 +6,7 @@ import {
   LOGIN,
   LOGOUT,
   REGISTER,
-  GET_USERS,DELETE_USERS, UPDATE_USERS, ADD_RESERVATIONS,GET_RESERVATIONS, DELETE_RESERVATIONS,UPDATE_RESERVATIONS, ADD_RESERVE,GET_RESERVE, FIND_USER, FIND_RESERVATION
+  GET_USERS,DELETE_USERS, UPDATE_USERS, ADD_RESERVATIONS,GET_RESERVATIONS, DELETE_RESERVATIONS,UPDATE_RESERVATIONS, ADD_RESERVE,GET_RESERVE, FIND_USER, FIND_RESERVATION, DELETE_RESERVE
 } from "../Types/authTypes";
 import { alert_error } from "./errorActions";
 
@@ -115,6 +115,17 @@ export const deletereservations = (id) => async (dispatch,navigate) => {
   }
 };
 
+export const deletereserve = (id) => async (dispatch) => {
+  try {
+    const res = await axios.delete(`/reserve/delete/${id}`);
+    console.log(res.data);
+    dispatch({ type: DELETE_RESERVE, payload: res.data });
+    
+    window.location.reload();
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const updateusers = (id,data) => async (dispatch) => {
   try {
