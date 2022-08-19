@@ -65,7 +65,7 @@ const Register = () => {
                 controlId="formBasicCheckbox"
               ></Form.Group>
               <Button
-                variant="warning"
+                variant="dark"
                 type="submit"
                 style={{
                   width: "10rem",

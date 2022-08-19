@@ -5,6 +5,19 @@ input::-webkit-inner-spin-button {
 }
 
 body{
-  background-color: hsl(207, 19%, 9%);
+  background-color: hsl(0, 0%, 100%);
   color: white;
+}
+.color-nav{
+
+  background-color: hsl(0, 0%, 0%);
+height: 80px;
+}
+.d-block{
+  height:500px;
+}
+
+.agency{
+height: 100px;
+width: 100px;
 }

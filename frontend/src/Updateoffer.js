@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { getreservations } from "./redux/Action/authAction";
-import Listofferhome from "./listofferhome";
+import Listoffer from './Listoffer';
 export default function Updateoffer() {
     const dispatch = useDispatch();
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function Updateoffer() {
     >
       {reservations?.map((el) => (
         <div key={el._id}>
-          <Listofferhome el={el} />
+          <Listoffer el={el} />
           {console.log(el)}
         </div>
       ))}
@@ -33,4 +33,3 @@ export default function Updateoffer() {
   </div>
   )
 }
-

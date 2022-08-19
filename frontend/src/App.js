@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect } from "react";
+import { useEffect} from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import Alerterrors from "./Alerterrors";
@@ -11,7 +11,10 @@ import PrivateRoutes from "./PrivateRoutes";
 import { get_current } from "./redux/Action/authAction";
 import Register from "./Register";
 import UserProfile from "./UserProfile";
-
+import Addreservation from "./Addreservation";
+import Updateoffer from "./Updateoffer"
+import AnnulerRes from "./AnnulerRes"
+import Listreservation from "./Listreservation"
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -29,6 +32,19 @@ function App() {
         <Route
           path="/profile"
           element={<PrivateRoutes Children={<UserProfile />} />}
+        />
+        <Route
+          path="/addreservation"
+          element={<PrivateRoutes Children={<Addreservation />} />}
+        />
+         <Route
+          path="/updateoffer"
+          element={<PrivateRoutes Children={<Updateoffer />} />}
+        />
+      
+          <Route
+          path="/listreservation"
+          element={<PrivateRoutes Children={<Listreservation />} />}
         />
       </Routes>
     </div>

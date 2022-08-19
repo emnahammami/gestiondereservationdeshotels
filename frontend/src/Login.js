@@ -14,7 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch(login({ email, password }, navigate));
+    dispatch(login({ email, password}, navigate));
   };
   return (
     <div>
@@ -53,7 +53,7 @@ const Login = () => {
               controlId="formBasicCheckbox"
             ></Form.Group>
             <Button
-              variant="warning"
+              variant="dark"
               type="submit"
               style={{
                 width: "10rem",
