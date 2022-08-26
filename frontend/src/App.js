@@ -31,21 +31,21 @@ function App() {
         {/* <Route path="/profile" element={<UserProfile />} /> */}
         <Route
           path="/profile"
-          element={<PrivateRoutes Children={<UserProfile />} />}
-        />
+          element={<UserProfile />} />
+        
         <Route
           path="/addreservation"
-          element={<PrivateRoutes Children={<Addreservation />} />}
-        />
+          element={<Addreservation />} />
+      
          <Route
           path="/updateoffer"
-          element={<PrivateRoutes Children={<Updateoffer />} />}
-        />
+          element={<Updateoffer />} />
+        
       
           <Route
           path="/listreservation"
-          element={<PrivateRoutes Children={<Listreservation />} />}
-        />
+          element={<Listreservation />} />
+       
       </Routes>
     </div>
   );
